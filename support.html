@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XCH2VPN — Поддержка / Support</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #f2f2f7;
+            color: #1c1c1e;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 48px 24px 80px;
+        }
+        .lang-switcher {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 36px;
+        }
+        .lang-switcher-inner {
+            display: inline-flex;
+            background: #e5e5ea;
+            border-radius: 10px;
+            padding: 3px;
+            gap: 2px;
+        }
+        .lang-btn {
+            background: none;
+            border: none;
+            padding: 7px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #6e6e73;
+            cursor: pointer;
+            transition: background 0.18s, color 0.18s;
+            font-family: inherit;
+        }
+        .lang-btn.active {
+            background: #ffffff;
+            color: #1c1c1e;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+        }
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .icon-link {
+            display: inline-block;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+            border-radius: 18px;
+        }
+        .icon-link:hover { transform: scale(1.05); opacity: 0.9; }
+        .icon-link:active { transform: scale(0.95); }
+        .icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 18px;
+            margin-bottom: 16px;
+            display: block;
+        }
+        header h1 { font-size: 28px; font-weight: 700; margin-bottom: 6px; }
+        header p { color: #6e6e73; font-size: 15px; }
+        .card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 12px;
+        }
+        .card h2 { font-size: 17px; font-weight: 600; margin-bottom: 10px; color: #1c1c1e; }
+        .card p { font-size: 15px; color: #48484a; white-space: pre-line; text-align: justify; }
+        .card ul { font-size: 15px; color: #48484a; padding-left: 20px; margin: 10px 0; }
+        .card li { margin-bottom: 6px; }
+        .card a { color: #007aff; text-decoration: none; }
+        .card a:hover { text-decoration: underline; }
+        .contact-btn {
+            display: inline-block;
+            margin-top: 14px;
+            background: #007aff;
+            color: #ffffff !important;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none !important;
+        }
+        .contact-btn:hover { background: #0066d6; color: #ffffff !important; text-decoration: none !important; }
+        .warning-card {
+            background: #fff5f5;
+            border: 2px solid #ff3b30;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 12px rgba(255, 59, 48, 0.15);
+        }
+        .warning-card h2 { font-size: 17px; font-weight: 700; margin-bottom: 10px; color: #c0392b; }
+        .warning-card p { font-size: 15px; color: #4a1a1a; white-space: pre-line; text-align: justify; }
+        .legal-card {
+            background: #fffdf5;
+            border: 2px solid #f5c542;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 12px rgba(245, 197, 66, 0.2);
+        }
+        .legal-card h2 { font-size: 17px; font-weight: 600; margin-bottom: 10px; color: #b8860b; }
+        .legal-card p { font-size: 15px; color: #5a4a1a; white-space: pre-line; text-align: justify; }
+        footer { text-align: center; margin-top: 32px; font-size: 13px; color: #aeaeb2; }
+        footer a { color: #007aff; text-decoration: none; }
+        [data-lang] { display: none; }
+        .lang-ru [data-lang="ru"] { display: block; }
+        .lang-en [data-lang="en"] { display: block; }
+        span[data-lang] { display: none; }
+        .lang-ru span[data-lang="ru"] { display: inline; }
+        .lang-en span[data-lang="en"] { display: inline; }
+    </style>
+</head>
+<body class="lang-ru">
+<div class="container">
+
+    <div class="lang-switcher">
+        <div class="lang-switcher-inner">
+            <button class="lang-btn active" onclick="setLang('ru')">RU</button>
+            <button class="lang-btn" onclick="setLang('en')">EN</button>
+        </div>
+    </div>
+
+    <header>
+        <a href="https://apps.apple.com/ru/app/xch2vpn/idXXXXXXXXX" class="icon-link" target="_blank" rel="noopener noreferrer" aria-label="Скачать XCH2VPN в App Store">
+            <img class="icon" src="icon.png" alt="XCH2VPN">
+        </a>
+        <h1>XCH2VPN</h1>
+        <p>
+            <span data-lang="ru">Поддержка</span>
+            <span data-lang="en">Support</span>
+        </p>
+    </header>
+
+    <div class="card">
+        <div data-lang="ru">
+            <h2>Об этом приложении</h2>
+            <p>XCH2VPN — это VPN-сервис с дополнительными функциями безопасности для Web3. Приложение разработано с фокусом на конфиденциальность и защиту данных. Если вы столкнулись с проблемой — напишите нам. Каждое сообщение читается и учитывается в следующих обновлениях.</p>
+            <a class="contact-btn" href="mailto:tunnelletter@gmail.com">Написать на email</a>
+        </div>
+        <div data-lang="en">
+            <h2>About This App</h2>
+            <p>XCH2VPN is a VPN service with additional security features for Web3. The app is built with a focus on privacy and data protection. If you run into an issue, please write to us. Every report is read and taken into account in future updates.</p>
+            <a class="contact-btn" href="mailto:tunnelletter@gmail.com">Send an email</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div data-lang="ru">
+            <h2>Для кого предназначен XCH2VPN</h2>
+            <p>XCH2VPN создан для пользователей, которые хотят защитить своё интернет-соединение и безопасно взаимодействовать с Web3-сервисами:</p>
+            <ul>
+                <li>Активные пользователи DeFi и Web3</li>
+                <li>Пользователи из стран с ограниченным доступом к Web3-сервисам</li>
+                <li>Все, кому нужен надёжный приватный VPN</li>
+            </ul>
+            <p>Приложение работает как полноценный VPN и без привязки к криптовалютам.</p>
+        </div>
+        <div data-lang="en">
+            <h2>Who XCH2VPN Is For</h2>
+            <p>XCH2VPN is built for users who want to protect their internet connection and safely interact with Web3 services:</p>
+            <ul>
+                <li>Active DeFi and Web3 users</li>
+                <li>Users from countries with restricted access to Web3 services</li>
+                <li>Anyone who needs a reliable private VPN</li>
+            </ul>
+            <p>The app works as a full-featured VPN even without cryptocurrency functionality.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div data-lang="ru">
+            <h2>Как начать пользоваться</h2>
+            <p><strong>1. Оформление подписки</strong>
+При первом запуске приложение предложит оформить подписку — на месяц или на год. Выберите нужный план, подтвердите покупку через Apple ID (Face ID или пароль). VPN-сервер и ключ доступа настроятся автоматически — вводить ничего вручную не нужно.</p>
+            <p style="margin-top: 14px;"><strong>2. Подключение VPN</strong>
+На главном экране находится кнопка-логотип. Одно нажатие включает или выключает VPN. Пока идёт подключение, логотип пульсирует. Когда соединение установлено, вокруг него загорается стабильное зелёное свечение.</p>
+            <p style="margin-top: 14px;"><strong>3. Restore Purchases</strong>
+Если вы уже подписаны, но приложение не видит подписку (например, после переустановки) — откройте настройки (значок шестерёнки) и нажмите «Restore purchases».</p>
+            <p style="margin-top: 14px;"><strong>4. Встроенный Web3-браузер</strong>
+Значок браузера открывает встроенный Web3-браузер для работы с dApps. Поддерживается подключение кошелька через WalletConnect и автоматический анализ транзакций.</p>
+            <p style="margin-top: 14px;"><strong>5. Удаление VPN-профиля</strong>
+В настройках есть кнопка «Удалить VPN-профиль». Понадобится только если нужно начать с чистого листа. При активной подписке профиль пересоздастся автоматически при следующем запуске.</p>
+        </div>
+        <div data-lang="en">
+            <h2>Getting Started</h2>
+            <p><strong>1. Subscription</strong>
+On first launch, the app will offer a subscription — monthly or yearly. Select the plan you want and confirm the purchase via Apple ID (Face ID or password). The VPN server and access key are configured automatically — no manual input is required.</p>
+            <p style="margin-top: 14px;"><strong>2. Connecting to VPN</strong>
+The main screen features a logo button. One tap turns the VPN on or off. While connecting, the logo pulsates. When the connection is established, a steady green glow appears around it.</p>
+            <p style="margin-top: 14px;"><strong>3. Restore Purchases</strong>
+If you're already subscribed but the app doesn't recognise it (e.g., after reinstallation), open Settings (gear icon) and tap "Restore purchases."</p>
+            <p style="margin-top: 14px;"><strong>4. Built-in Web3 Browser</strong>
+The browser icon opens a built-in Web3 browser for dApp interaction. Supports WalletConnect wallet connection and automatic transaction analysis.</p>
+            <p style="margin-top: 14px;"><strong>5. Remove VPN Profile</strong>
+In Settings, there is a "Remove VPN profile" button. Needed only when you want to start fresh. While the subscription is active, the profile will automatically recreate on the next launch.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div data-lang="ru">
+            <h2>Настройки VPN</h2>
+            <p><strong>Режим туннеля</strong>
+«Исключить российский трафик из VPN» — если включено, сайты с российскими IP-адресами идут напрямую, минуя VPN (быстрее для локальных сервисов). Весь остальной трафик проходит через защищённый туннель.</p>
+            <p style="margin-top: 14px;"><strong>Kill Switch</strong>
+«Блокировать интернет при неожиданном обрыве VPN» — рекомендуем оставлять включённым. Если соединение с сервером внезапно потеряется, интернет заблокируется полностью, вместо того чтобы переключиться на незащищённое соединение.</p>
+        </div>
+        <div data-lang="en">
+            <h2>VPN Settings</h2>
+            <p><strong>Tunnel Mode</strong>
+"Exclude Russian traffic from VPN" — when enabled, sites with Russian IP addresses go directly, bypassing the VPN (faster for local services). All other traffic goes through the secure tunnel.</p>
+            <p style="margin-top: 14px;"><strong>Kill Switch</strong>
+"Block internet if VPN disconnects unexpectedly" — recommended to keep on. If the server connection is suddenly lost, the internet is blocked completely, rather than switching to an unprotected connection.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div data-lang="ru">
+            <h2>Работа с браузером</h2>
+            <p><strong>Подключение кошелька</strong>
+Нажмите вкладку «Кошелёк» в правом верхнем углу браузера. Откроется список поддерживаемых кошельков через WalletConnect (включая MetaMask). Выберите свой, подтвердите подключение в самом кошельке.</p>
+            <p style="margin-top: 14px;"><strong>Выбор сети</strong>
+Слева от адресной строки находится переключатель блокчейн-сети. Поддерживаются: Ethereum, Arbitrum, Base, Polygon, Optimism, BNB Chain.</p>
+            <p style="margin-top: 14px;"><strong>Проверка транзакций</strong>
+Перед подписью каждой транзакции приложение анализирует её и показывает предупреждение, если обнаруживает риск:</p>
+            <ul>
+                <li>Безлимитные разрешения (approve)</li>
+                <li>Полный доступ к NFT (setApprovalForAll)</li>
+                <li>Подозрительные offline-подписи (permit, Permit2)</li>
+                <li>Address poisoning</li>
+            </ul>
+        </div>
+        <div data-lang="en">
+            <h2>Browser Usage</h2>
+            <p><strong>Wallet Connection</strong>
+Tap the "Wallet" tab in the top right corner of the browser. A list of supported wallets via WalletConnect (including MetaMask) will appear. Select yours and confirm the connection in your wallet.</p>
+            <p style="margin-top: 14px;"><strong>Network Selection</strong>
+To the left of the address bar is the blockchain network switcher. Supported: Ethereum, Arbitrum, Base, Polygon, Optimism, BNB Chain.</p>
+            <p style="margin-top: 14px;"><strong>Transaction Scanning</strong>
+Before each transaction signature, the app analyses it and shows warnings if risks are detected:</p>
+            <ul>
+                <li>Unlimited approvals (approve)</li>
+                <li>Full NFT access (setApprovalForAll)</li>
+                <li>Suspicious offline signatures (permit, Permit2)</li>
+                <li>Address poisoning</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <div data-lang="ru">
+            <h2>Частые вопросы</h2>
+            <p><strong>Почему без VPN некоторые сайты и WalletConnect не работают?</strong>
+Инфраструктура WalletConnect и часть Web3-сервисов физически заблокированы для доступа из России и в некоторых других странах. Включённый VPN решает эту проблему автоматически.</p>
+            <p style="margin-top: 14px;"><strong>Безопасно ли подключать реальный кошелёк?</strong>
+Да. Приложение никогда не запрашивает и не хранит приватные ключи или seed-фразу. Все подписи происходят в вашем кошельке (MetaMask и подобные). XCH2VPN только показывает предупреждения до момента подписи.</p>
+            <p style="margin-top: 14px;"><strong>Что такое Kill Switch?</strong>
+Это функция, которая блокирует интернет, если VPN-соединение неожиданно обрывается. Ваш трафик никогда не идёт в обход защиты.</p>
+            <p style="margin-top: 14px;"><strong>Как обновить список фишинговых доменов?</strong>
+База обновляется автоматически каждые несколько часов. Вам не нужно делать ничего вручную.</p>
+        </div>
+        <div data-lang="en">
+            <h2>FAQ</h2>
+            <p><strong>Why do some websites and WalletConnect not work without VPN?</strong>
+WalletConnect infrastructure and some Web3 services are blocked from Russia and some other countries. The enabled VPN solves this problem automatically.</p>
+            <p style="margin-top: 14px;"><strong>Is it safe to connect a real wallet?</strong>
+Yes. The app never requests or stores private keys or seed phrases. All signatures happen in your wallet (MetaMask and similar). XCH2VPN only shows warnings before the signature.</p>
+            <p style="margin-top: 14px;"><strong>What is Kill Switch?</strong>
+A feature that blocks internet access if the VPN connection unexpectedly drops. Your traffic never goes unprotected.</p>
+            <p style="margin-top: 14px;"><strong>How do I update the phishing domain list?</strong>
+The database updates automatically every few hours. No manual action is required.</p>
+        </div>
+    </div>
+
+    <div class="warning-card">
+        <div data-lang="ru">
+            <h2>⚠️ Перед удалением приложения</h2>
+            <p><strong>Убедитесь, что ваша подписка активна или отменена.</strong>
+При удалении приложения VPN-профиль удаляется из системных настроек iOS. Если подписка активна, при следующей установке профиль восстановится автоматически при нажатии Restore Purchases.</p>
+        </div>
+        <div data-lang="en">
+            <h2>⚠️ Before Deleting the App</h2>
+            <p><strong>Make sure your subscription is active or cancelled.</strong>
+When you delete the app, the VPN profile is removed from iOS system settings. If the subscription is active, the profile will be restored automatically on the next installation when you tap Restore Purchases.</p>
+        </div>
+    </div>
+
+    <div class="legal-card">
+        <div data-lang="ru">
+            <h2>⚖️ Законное использование</h2>
+            <p>XCH2VPN предназначен исключительно для законных целей. Пользователь обязуется не использовать приложение для распространения запрещённого контента, преследования, мошенничества или любых других незаконных действий. Создатель приложения не несёт ответственности за действия пользователей и напоминает об обязанности соблюдать законодательство той страны, где приложение используется. Скачивая приложение, пользователь подтверждает взятые на себя обязательства в соответствии с данным пунктом.</p>
+        </div>
+        <div data-lang="en">
+            <h2>⚖️ Lawful Use</h2>
+            <p>XCH2VPN is intended exclusively for lawful purposes. The user agrees not to use the app for distributing prohibited content, harassment, fraud, or any other illegal activities. The app creator bears no responsibility for user actions and reminds users of their obligation to comply with the laws of the country where the app is used. By downloading the app, the user confirms their commitment to the obligations set forth in this section.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div data-lang="ru">
+            <h2>Безопасность и конфиденциальность</h2>
+            <p>Все данные, передаваемые через VPN, защищены шифрованием. Подробнее — в <a href="privacy-policy.html">Политике конфиденциальности</a>.</p>
+        </div>
+        <div data-lang="en">
+            <h2>Security and Privacy</h2>
+            <p>All data transmitted through the VPN is protected by encryption. Learn more in the <a href="privacy-policy.html">Privacy Policy</a>.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div data-lang="ru">
+            <h2>Контакт</h2>
+            <p>По всем вопросам, жалобам и предложениям обращайтесь к разработчику:
+<a href="mailto:tunnelletter@gmail.com">tunnelletter@gmail.com</a></p>
+        </div>
+        <div data-lang="en">
+            <h2>Contact</h2>
+            <p>For any questions, complaints, and suggestions, reach out to the developer:
+<a href="mailto:tunnelletter@gmail.com">tunnelletter@gmail.com</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>XCH2VPN · <a href="privacy-policy.html">
+            <span data-lang="ru">Политика конфиденциальности</span>
+            <span data-lang="en">Privacy Policy</span>
+        </a></p>
+    </footer>
+
+</div>
+
+<script>
+    function setLang(lang) {
+        document.body.className = 'lang-' + lang;
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+        });
+        document.documentElement.lang = lang;
+    }
+</script>
+</body>
+</html>
