@@ -237,10 +237,10 @@
                 <li>Приложение никогда не запрашивает и не хранит приватные ключи</li>
                 <li>Все подписи происходят в вашем кошельке</li>
                 <li>Анализ транзакций выполняется локально на устройстве</li>
-                <li>Адрес кошелька используется только для отображения информации</li>
-                <li>История транзакций не передаётся на сервер и не сохраняется</li>
+                <li>Адрес кошелька отображается в интерфейсе и — только когда вы сами используете сканер транзакций или проверку approvals — передаётся поставщикам блокчейн-данных (Alchemy, Etherscan) исключительно для выполнения этой конкретной проверки</li>
+                <li>История транзакций не сохраняется на наших серверах</li>
             </ul>
-            <p>Информация о ваших активах и транзакциях остаётся исключительно на вашем устройстве.</p>
+            <p>Мы не отправляем поставщикам блокчейн-данных ничего сверх того, что технически необходимо для запрошенной вами проверки.</p>
         </div>
         <div data-lang="en">
             <h2>Web3 Wallet and Transactions</h2>
@@ -249,23 +249,39 @@
                 <li>The app never requests or stores private keys</li>
                 <li>All signatures happen in your wallet</li>
                 <li>Transaction analysis is performed locally on the device</li>
-                <li>The wallet address is used only for display purposes</li>
-                <li>Transaction history is not sent to the server and is not stored</li>
+                <li>The wallet address is shown in the interface and — only when you actively use the transaction scanner or approvals check — is sent to blockchain data providers (Alchemy, Etherscan) solely to perform that specific check</li>
+                <li>Transaction history is not stored on our servers</li>
             </ul>
-            <p>Information about your assets and transactions remains solely on your device.</p>
+            <p>We do not send blockchain data providers anything beyond what is technically necessary for the check you requested.</p>
         </div>
     </div>
 
     <div class="card">
         <div data-lang="ru">
             <h2>Передача данных третьим лицам</h2>
-            <p>Мы не продаём, не передаём и не раскрываем никакие данные третьим лицам. В приложении нет рекламы, аналитики и трекинга.</p>
-            <p>Единственное исключение — когда это требуется по закону, но только в пределах, предусмотренных законодательством, и с соблюдением ваших прав на конфиденциальность.</p>
+            <p>Мы не продаём ваши данные. В приложении нет рекламы и нет собственной аналитики или трекинга, отслеживающих вас между сайтами или сессиями.</p>
+            <p>При этом ряд Web3-функций технически требует обращения к специализированным внешним сервисам — без этого сами функции не могут работать:</p>
+            <ul>
+                <li><strong>Alchemy и Etherscan</strong> — при сканировании транзакции перед подписью или проверке approvals им передаётся адрес вашего кошелька и данные транзакции, необходимые для этой конкретной проверки</li>
+                <li><strong>WalletConnect (Reown)</strong> — инфраструктура подключения кошелька; видит факт и метаданные сессии подключения</li>
+                <li><strong>DuckDuckGo</strong> — если вы используете поиск через адресную строку браузера, поисковый запрос уходит к нему напрямую</li>
+                <li><strong>Google DNS и Cloudflare DNS</strong> — при включённом VPN ваши DNS-запросы (какие домены вы посещаете) обрабатываются этими DNS-серверами, на которые настроен туннель</li>
+            </ul>
+            <p>Эти сервисы действуют в рамках собственных политик конфиденциальности. Мы передаём им только то, что технически необходимо для запрошенной вами функции, и не используем их для рекламы или отслеживания.</p>
+            <p>Единственное дополнительное исключение — когда раскрытие требуется по закону, но только в пределах, предусмотренных законодательством, и с соблюдением ваших прав на конфиденциальность.</p>
         </div>
         <div data-lang="en">
             <h2>Third-Party Data Sharing</h2>
-            <p>We do not sell, share, or disclose any data to third parties. The app contains no advertising, analytics, or tracking of any kind.</p>
-            <p>The only exception is if required by law, but only within the limits prescribed by legislation, and with full respect for your privacy rights.</p>
+            <p>We do not sell your data. The app contains no advertising and no analytics or tracking of our own that follows you across sites or sessions.</p>
+            <p>That said, several Web3 features technically require contacting specialized external services — without this, those features could not function:</p>
+            <ul>
+                <li><strong>Alchemy and Etherscan</strong> — when you scan a transaction before signing or check your approvals, your wallet address and the relevant transaction data are sent to them solely to perform that specific check</li>
+                <li><strong>WalletConnect (Reown)</strong> — the wallet-connection infrastructure; it sees the fact and metadata of a connection session</li>
+                <li><strong>DuckDuckGo</strong> — if you use the browser's address bar to search, your query goes directly to it</li>
+                <li><strong>Google DNS and Cloudflare DNS</strong> — while the VPN is connected, your DNS queries (which domains you visit) are handled by these DNS servers, which the tunnel is configured to use</li>
+            </ul>
+            <p>These services operate under their own privacy policies. We send them only what is technically necessary for the feature you requested, and we do not use them for advertising or tracking.</p>
+            <p>The only additional exception is disclosure required by law, and only to the extent required by such law, with full respect for your privacy rights.</p>
         </div>
     </div>
 
