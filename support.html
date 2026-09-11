@@ -144,12 +144,12 @@
     <div class="card">
         <div data-lang="ru">
             <h2>Об этом приложении</h2>
-            <p>XCH2VPN — это VPN-сервис с дополнительными функциями безопасности для Web3. Приложение разработано с фокусом на конфиденциальность и защиту данных. Если вы столкнулись с проблемой — напишите нам. Каждое сообщение читается и учитывается в следующих обновлениях.</p>
+            <p>XCH2VPN — это VPN-сервис, работающий на собственной реализации туннеля. Приложение разработано с фокусом на конфиденциальность и защиту данных. Если вы столкнулись с проблемой — напишите нам. Каждое сообщение читается и учитывается в следующих обновлениях.</p>
             <a class="contact-btn" href="mailto:tunnelletter@gmail.com">Написать на email</a>
         </div>
         <div data-lang="en">
             <h2>About This App</h2>
-            <p>XCH2VPN is a VPN service with additional security features for Web3. The app is built with a focus on privacy and data protection. If you run into an issue, please write to us. Every report is read and taken into account in future updates.</p>
+            <p>XCH2VPN is a VPN service built on its own tunnel implementation. The app is built with a focus on privacy and data protection. If you run into an issue, please write to us. Every report is read and taken into account in future updates.</p>
             <a class="contact-btn" href="mailto:tunnelletter@gmail.com">Send an email</a>
         </div>
     </div>
@@ -157,23 +157,21 @@
     <div class="card">
         <div data-lang="ru">
             <h2>Для кого предназначен XCH2VPN</h2>
-            <p>XCH2VPN создан для пользователей, которые хотят защитить своё интернет-соединение и безопасно взаимодействовать с Web3-сервисами:</p>
+            <p>XCH2VPN создан для пользователей, которые хотят защитить своё интернет-соединение:</p>
             <ul>
-                <li>Активные пользователи DeFi и Web3</li>
-                <li>Пользователи из стран с ограниченным доступом к Web3-сервисам</li>
                 <li>Все, кому нужен надёжный приватный VPN</li>
+                <li>Пользователи, которые хотят сохранить конфиденциальность трафика</li>
+                <li>Те, кто работает в сетях с нестабильным соединением или в роуминге</li>
             </ul>
-            <p>Приложение работает как полноценный VPN и без привязки к криптовалютам.</p>
         </div>
         <div data-lang="en">
             <h2>Who XCH2VPN Is For</h2>
-            <p>XCH2VPN is built for users who want to protect their internet connection and safely interact with Web3 services:</p>
+            <p>XCH2VPN is built for users who want to protect their internet connection:</p>
             <ul>
-                <li>Active DeFi and Web3 users</li>
-                <li>Users from countries with restricted access to Web3 services</li>
                 <li>Anyone who needs a reliable private VPN</li>
+                <li>Users who want to keep their traffic private</li>
+                <li>Those working on unstable connections or while roaming</li>
             </ul>
-            <p>The app works as a full-featured VPN even without cryptocurrency functionality.</p>
         </div>
     </div>
 
@@ -186,9 +184,7 @@
 На главном экране находится кнопка-логотип. Одно нажатие включает или выключает VPN. Пока идёт подключение, логотип пульсирует. Когда соединение установлено, вокруг него загорается стабильное зелёное свечение. Если в настройках включён режим туннелирования («Исключить российский трафик из VPN»), поверх зелёного круга появляется дополнительное оранжевое кольцо — это визуальный индикатор того, что часть трафика идёт в обход VPN.</p>
             <p style="margin-top: 14px;"><strong>3. Restore Purchases</strong>
 Если вы уже подписаны, но приложение не видит подписку (например, после переустановки) — откройте настройки (значок шестерёнки) и нажмите «Restore purchases».</p>
-            <p style="margin-top: 14px;"><strong>4. Встроенный Web3-браузер</strong>
-Значок браузера открывает встроенный Web3-браузер для работы с dApps. Поддерживается подключение кошелька через WalletConnect и автоматический анализ транзакций.</p>
-            <p style="margin-top: 14px;"><strong>5. Удаление VPN-профиля</strong>
+            <p style="margin-top: 14px;"><strong>4. Удаление VPN-профиля</strong>
 В настройках есть кнопка «Удалить VPN-профиль». Понадобится только если нужно начать с чистого листа. При активной подписке профиль пересоздастся автоматически при следующем запуске.</p>
         </div>
         <div data-lang="en">
@@ -199,9 +195,7 @@ On first launch, the app will offer a subscription — monthly or yearly. Select
 The main screen features a logo button. One tap turns the VPN on or off. While connecting, the logo pulsates. When the connection is established, a steady green glow appears around it. If tunnel mode is enabled in settings ("Exclude Russian traffic from VPN"), an additional orange ring appears around the green circle — this visually indicates that part of the traffic is bypassing the VPN.</p>
             <p style="margin-top: 14px;"><strong>3. Restore Purchases</strong>
 If you're already subscribed but the app doesn't recognise it (e.g., after reinstallation), open Settings (gear icon) and tap "Restore purchases."</p>
-            <p style="margin-top: 14px;"><strong>4. Built-in Web3 Browser</strong>
-The browser icon opens a built-in Web3 browser for dApp interaction. Supports WalletConnect wallet connection and automatic transaction analysis.</p>
-            <p style="margin-top: 14px;"><strong>5. Remove VPN Profile</strong>
+            <p style="margin-top: 14px;"><strong>4. Remove VPN Profile</strong>
 In Settings, there is a "Remove VPN profile" button. Needed only when you want to start fresh. While the subscription is active, the profile will automatically recreate on the next launch.</p>
         </div>
     </div>
@@ -225,63 +219,26 @@ In Settings, there is a "Remove VPN profile" button. Needed only when you want t
 
     <div class="card">
         <div data-lang="ru">
-            <h2>Работа с браузером</h2>
-            <p><strong>Подключение кошелька</strong>
-Нажмите вкладку «Кошелёк» в правом верхнем углу браузера. Откроется список поддерживаемых кошельков через WalletConnect (включая MetaMask). Выберите свой, подтвердите подключение в самом кошельке.</p>
-            <p style="margin-top: 14px;"><strong>Выбор сети</strong>
-Слева от адресной строки находится переключатель блокчейн-сети. Поддерживаются: Ethereum, Arbitrum, Base, Polygon, Optimism, BNB Chain.</p>
-            <p style="margin-top: 14px;"><strong>Проверка транзакций</strong>
-Перед подписью каждой транзакции приложение анализирует её и показывает предупреждение, если обнаруживает риск:</p>
-            <ul>
-                <li>Безлимитные разрешения (approve)</li>
-                <li>Полный доступ к NFT (setApprovalForAll)</li>
-                <li>Подозрительные offline-подписи (permit, Permit2)</li>
-                <li>Address poisoning</li>
-            </ul>
-            <p style="margin-top: 14px;"><strong>Approvals Monitor</strong>
-В меню кошелька (нажмите на зелёную капсулу с адресом после подключения) выберите «Check approvals». Приложение просканирует историю кошелька и покажет все активные разрешения на списание токенов — включая давно забытые. Безлимитные разрешения помечены отдельно. Отзыв — один тап, без необходимости искать контракт вручную.</p>
-        </div>
-        <div data-lang="en">
-            <h2>Browser Usage</h2>
-            <p><strong>Wallet Connection</strong>
-Tap the "Wallet" tab in the top right corner of the browser. A list of supported wallets via WalletConnect (including MetaMask) will appear. Select yours and confirm the connection in your wallet.</p>
-            <p style="margin-top: 14px;"><strong>Network Selection</strong>
-To the left of the address bar is the blockchain network switcher. Supported: Ethereum, Arbitrum, Base, Polygon, Optimism, BNB Chain.</p>
-            <p style="margin-top: 14px;"><strong>Transaction Scanning</strong>
-Before each transaction signature, the app analyses it and shows warnings if risks are detected:</p>
-            <ul>
-                <li>Unlimited approvals (approve)</li>
-                <li>Full NFT access (setApprovalForAll)</li>
-                <li>Suspicious offline signatures (permit, Permit2)</li>
-                <li>Address poisoning</li>
-            </ul>
-            <p style="margin-top: 14px;"><strong>Approvals Monitor</strong>
-From the wallet menu (tap the green address capsule after connecting), select "Check approvals." The app scans your wallet's history and shows every active token spending approval — including long-forgotten ones. Unlimited approvals are marked separately. Revoke with one tap, no need to search for the contract manually.</p>
-        </div>
-    </div>
-
-    <div class="card">
-        <div data-lang="ru">
             <h2>Частые вопросы</h2>
-            <p><strong>Почему без VPN некоторые сайты и WalletConnect не работают?</strong>
-Инфраструктура WalletConnect и часть Web3-сервисов физически заблокированы для доступа из России и в некоторых других странах. Включённый VPN решает эту проблему автоматически.</p>
-            <p style="margin-top: 14px;"><strong>Безопасно ли подключать реальный кошелёк?</strong>
-Да. Приложение никогда не запрашивает и не хранит приватные ключи или seed-фразу. Все подписи происходят в вашем кошельке (MetaMask и подобные). XCH2VPN только показывает предупреждения до момента подписи.</p>
-            <p style="margin-top: 14px;"><strong>Что такое Kill Switch?</strong>
+            <p><strong>Что такое Kill Switch?</strong>
 Это функция, которая блокирует интернет, если VPN-соединение неожиданно обрывается. Ваш трафик никогда не идёт в обход защиты.</p>
-            <p style="margin-top: 14px;"><strong>Как обновить список фишинговых доменов?</strong>
-База обновляется автоматически каждые несколько часов. Вам не нужно делать ничего вручную.</p>
+            <p style="margin-top: 14px;"><strong>Почему VPN может переподключаться?</strong>
+При смене сети (Wi-Fi ↔ сотовая связь), в роуминге или при нестабильном сигнале туннель может кратковременно разрываться и восстанавливаться автоматически. Это нормальное поведение — приложение само переподключается.</p>
+            <p style="margin-top: 14px;"><strong>Как узнать, что VPN действительно работает?</strong>
+На главном экране вокруг логотипа горит стабильное зелёное свечение — это значит, что туннель установлен. Если свечение оранжевое, значит включён режим исключения российского трафика.</p>
+            <p style="margin-top: 14px;"><strong>Что делать, если VPN не подключается?</strong>
+Проверьте интернет-соединение, попробуйте переключиться между Wi-Fi и сотовой связью. Если проблема сохраняется — напишите нам на почту.</p>
         </div>
         <div data-lang="en">
             <h2>FAQ</h2>
-            <p><strong>Why do some websites and WalletConnect not work without VPN?</strong>
-WalletConnect infrastructure and some Web3 services are blocked from Russia and some other countries. The enabled VPN solves this problem automatically.</p>
-            <p style="margin-top: 14px;"><strong>Is it safe to connect a real wallet?</strong>
-Yes. The app never requests or stores private keys or seed phrases. All signatures happen in your wallet (MetaMask and similar). XCH2VPN only shows warnings before the signature.</p>
-            <p style="margin-top: 14px;"><strong>What is Kill Switch?</strong>
+            <p><strong>What is Kill Switch?</strong>
 A feature that blocks internet access if the VPN connection unexpectedly drops. Your traffic never goes unprotected.</p>
-            <p style="margin-top: 14px;"><strong>How do I update the phishing domain list?</strong>
-The database updates automatically every few hours. No manual action is required.</p>
+            <p style="margin-top: 14px;"><strong>Why does the VPN sometimes reconnect?</strong>
+When switching networks (Wi-Fi ↔ cellular), while roaming, or on an unstable signal, the tunnel may briefly drop and recover automatically. This is normal behaviour — the app reconnects on its own.</p>
+            <p style="margin-top: 14px;"><strong>How do I know the VPN is actually working?</strong>
+On the main screen, a steady green glow around the logo means the tunnel is established. If the glow is orange, the "exclude Russian traffic" mode is enabled.</p>
+            <p style="margin-top: 14px;"><strong>What if the VPN won't connect?</strong>
+Check your internet connection and try switching between Wi-Fi and cellular. If the problem persists, write to us by email.</p>
         </div>
     </div>
 
