@@ -1,259 +1,120 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XCH2VPN — Privacy Policy / Политика конфиденциальности</title>
+    <title>Privacy Policy - XCH2VPN</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * { margin:0; padding:0; box-sizing:border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background: #f2f2f7;
-            color: #1c1c1e;
-            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height:1.6; color:#333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height:100vh; padding:20px;
         }
         .container {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 48px 24px 80px;
+            max-width:800px; margin:0 auto;
+            background:white; border-radius:20px;
+            box-shadow:0 20px 60px rgba(0,0,0,0.3);
+            padding:40px;
         }
-        .lang-switcher {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 36px;
+        header { text-align:center; margin-bottom:40px; padding-bottom:30px; border-bottom:2px solid #f0f0f0; }
+        h1 { font-size:2.5em; color:#667eea; margin-bottom:10px; }
+        .update-date { color:#666; font-style:italic; }
+        section { margin-bottom:40px; }
+        h2 { font-size:1.5em; color:#667eea; margin-bottom:15px; padding-bottom:10px; border-bottom:1px solid #f0f0f0; }
+        p { margin-bottom:15px; }
+        ul { margin-left:30px; margin-bottom:15px; }
+        li { margin-bottom:8px; }
+        strong { color:#667eea; }
+        a { color:#667eea; text-decoration:none; }
+        a:hover { text-decoration:underline; }
+        footer { text-align:center; margin-top:50px; padding-top:30px; border-top:2px solid #f0f0f0; color:#666; }
+        @media(max-width:600px) {
+            body { padding:10px; }
+            .container { padding:30px 20px; border-radius:15px; }
+            h1 { font-size:2em; }
         }
-        .lang-switcher-inner {
-            display: inline-flex;
-            background: #e5e5ea;
-            border-radius: 10px;
-            padding: 3px;
-            gap: 2px;
-        }
-        .lang-btn {
-            background: none;
-            border: none;
-            padding: 7px 20px;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: 600;
-            color: #6e6e73;
-            cursor: pointer;
-            transition: background 0.18s, color 0.18s;
-            font-family: inherit;
-        }
-        .lang-btn.active {
-            background: #ffffff;
-            color: #1c1c1e;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.12);
-        }
-        header {
-            text-align: center;
-            margin-bottom: 48px;
-        }
-        .icon-link {
-            display: inline-block;
-            transition: transform 0.2s ease, opacity 0.2s ease;
-            border-radius: 18px;
-        }
-        .icon-link:hover { transform: scale(1.05); opacity: 0.9; }
-        .icon-link:active { transform: scale(0.95); }
-        .icon {
-            width: 80px;
-            height: 80px;
-            border-radius: 18px;
-            margin-bottom: 16px;
-            display: block;
-        }
-        header h1 { font-size: 28px; font-weight: 700; margin-bottom: 6px; }
-        header p { color: #6e6e73; font-size: 15px; }
-        .card {
-            background: #ffffff;
-            border-radius: 16px;
-            padding: 24px;
-            margin-bottom: 12px;
-        }
-        .card h2 { font-size: 17px; font-weight: 600; margin-bottom: 10px; color: #1c1c1e; }
-        .card p { font-size: 15px; color: #48484a; white-space: pre-line; text-align: justify; }
-        .card ul { font-size: 15px; color: #48484a; padding-left: 20px; margin: 10px 0; }
-        .card li { margin-bottom: 6px; }
-        .card a { color: #007aff; text-decoration: none; }
-        .card a:hover { text-decoration: underline; }
-        footer { text-align: center; margin-top: 32px; font-size: 13px; color: #aeaeb2; }
-        footer a { color: #007aff; text-decoration: none; }
-        [data-lang] { display: none; }
-        .lang-ru [data-lang="ru"] { display: block; }
-        .lang-en [data-lang="en"] { display: block; }
-        span[data-lang] { display: none; }
-        .lang-ru span[data-lang="ru"] { display: inline; }
-        .lang-en span[data-lang="en"] { display: inline; }
     </style>
 </head>
-<body class="lang-ru">
-<div class="container">
+<body>
+    <div class="container">
+        <header>
+            <h1>Privacy Policy</h1>
+            <p class="update-date">Last Updated: April 2026</p>
+        </header>
 
-    <div class="lang-switcher">
-        <div class="lang-switcher-inner">
-            <button class="lang-btn active" onclick="setLang('ru')">RU</button>
-            <button class="lang-btn" onclick="setLang('en')">EN</button>
-        </div>
-    </div>
+        <section>
+            <h2>Overview</h2>
+            <p><strong>XCH2VPN</strong> is a VPN service built on its own tunnel implementation. We take data privacy seriously. This document describes what information we collect, how we use it, and your rights.</p>
+        </section>
 
-    <header>
-        <a href="https://apps.apple.com/ru/app/xch2vpn/idXXXXXXXXX" class="icon-link" target="_blank" rel="noopener noreferrer" aria-label="Скачать XCH2VPN в App Store">
-            <img class="icon" src="icon.png" alt="XCH2VPN">
-        </a>
-        <h1>XCH2VPN</h1>
-        <p>
-            <span data-lang="ru">Политика конфиденциальности</span>
-            <span data-lang="en">Privacy Policy</span>
-        </p>
-    </header>
-
-    <div class="card">
-        <div data-lang="ru">
-            <h2>Общие положения</h2>
-            <p>XCH2VPN — это VPN-сервис, работающий на собственной реализации туннеля. Мы серьёзно относимся к конфиденциальности данных. В этом документе описано, какую информацию мы собираем, как её используем и каковы ваши права.</p>
-        </div>
-        <div data-lang="en">
-            <h2>General Provisions</h2>
-            <p>XCH2VPN is a VPN service built on its own tunnel implementation. We take data privacy seriously. This document describes what information we collect, how we use it, and your rights.</p>
-        </div>
-    </div>
-
-    <div class="card">
-        <div data-lang="ru">
-            <h2>VPN-логи и анонимность</h2>
-            <p><strong>Строгий запрет на логирование.</strong> Мы не ведём логи активности пользователей. Это значит, что мы никогда не храним и не видим:</p>
-            <ul>
-                <li>IP-адреса пользователей</li>
-                <li>Посещённые сайты</li>
-                <li>Время и продолжительность сеансов</li>
-                <li>Объём переданного трафика</li>
-            </ul>
-            <p>Единственная техническая информация, необходимая для работы сервиса — это активный статус подписки и технические данные для поддержания соединения. Эти данные автоматически удаляются при завершении сессии.</p>
-        </div>
-        <div data-lang="en">
+        <section>
             <h2>VPN Logs and Anonymity</h2>
             <p><strong>Strict no-log policy.</strong> We do not log user activity. This means we never store or see:</p>
             <ul>
-                <li>User IP addresses</li>
                 <li>Visited websites</li>
                 <li>Session time and duration</li>
                 <li>Amount of traffic transferred</li>
+                <li>DNS queries made by the user</li>
             </ul>
             <p>The only technical information necessary for the service is active subscription status and connection maintenance data. This data is automatically deleted when the session ends.</p>
-        </div>
-    </div>
+        </section>
 
-    <div class="card">
-        <div data-lang="ru">
-            <h2>Информация о подписке</h2>
-            <p>Для работы сервиса мы получаем информацию о статусе вашей подписки через App Store. Это включает:</p>
-            <ul>
-                <li>Идентификатор транзакции (transaction ID)</li>
-                <li>Идентификатор продукта (product ID)</li>
-                <li>Дата активации и дата истечения подписки</li>
-                <li>Статус подписки (активна/неактивна)</li>
-            </ul>
-            <p>Эта информация используется исключительно для предоставления доступа к VPN-сервису и не передаётся третьим лицам.</p>
-        </div>
-        <div data-lang="en">
+        <section>
             <h2>Subscription Information</h2>
-            <p>To provide the service, we receive information about your subscription status through the App Store. This includes:</p>
+            <p>To provide the service, we receive information about your subscription status through the App Store and store a minimal record on our backend. This includes:</p>
             <ul>
-                <li>Transaction ID</li>
-                <li>Product ID</li>
-                <li>Activation date and expiration date</li>
+                <li>Original transaction ID (a non-personal identifier issued by Apple)</li>
+                <li>Subscription expiration date</li>
                 <li>Subscription status (active/inactive)</li>
+                <li>Your personal PSK key</li>
             </ul>
-            <p>This information is used solely to provide access to the VPN service and is not shared with third parties.</p>
-        </div>
-    </div>
+            <p>This information is used <strong>solely</strong> to provide access to the VPN service, verify your subscription status, and issue your personal VPN configuration. It is <strong>not shared with third parties</strong> and <strong>not used for advertising or tracking</strong>.</p>
+        </section>
 
-    <div class="card">
-        <div data-lang="ru">
-            <h2>Данные VPN-профиля</h2>
-            <p>При активации подписки сервер выдаёт каждому пользователю персональный PSK-ключ и адрес сервера. Эта информация:</p>
-            <ul>
-                <li>Генерируется автоматически при активации подписки</li>
-                <li>Не содержит персональных данных</li>
-                <li>Привязана к вашему аккаунту App Store только через transaction ID</li>
-                <li>Используется исключительно для установки защищённого VPN-соединения</li>
-            </ul>
-            <p>Ваш PSK-ключ никогда не передаётся третьим лицам и не сохраняется в открытом виде.</p>
-        </div>
-        <div data-lang="en">
+        <section>
             <h2>VPN Profile Data</h2>
-            <p>Upon subscription activation, the server issues each user a personal PSK key and server address. This information:</p>
+            <p>Upon subscription activation, our backend issues each user a personal PSK key and server address. This information:</p>
             <ul>
                 <li>Is generated automatically upon subscription activation</li>
                 <li>Contains no personal data</li>
-                <li>Is linked to your App Store account only via transaction ID</li>
+                <li>Is associated with your subscription only through the original transaction ID</li>
                 <li>Is used exclusively to establish a secure VPN connection</li>
+                <li>Is stored on our backend to allow re-issuance if you reinstall the app or switch devices</li>
             </ul>
             <p>Your PSK key is never shared with third parties and is not stored in plain text.</p>
-        </div>
-    </div>
+        </section>
 
-    <div class="card">
-        <div data-lang="ru">
-            <h2>Передача данных третьим лицам</h2>
-            <p>Мы не продаём ваши данные. В приложении нет рекламы и нет собственной аналитики или трекинга, отслеживающих вас между сайтами или сессиями.</p>
-            <p>При этом для работы VPN-туннеля технически необходимы обращения к DNS-серверам, на которые настроен туннель:</p>
-            <ul>
-                <li><strong>Google DNS и Cloudflare DNS</strong> — при включённом VPN ваши DNS-запросы (какие домены вы посещаете) обрабатываются этими DNS-серверами, на которые настроен туннель</li>
-            </ul>
-            <p>Эти сервисы действуют в рамках собственных политик конфиденциальности. Мы передаём им только то, что технически необходимо для работы VPN-соединения, и не используем их для рекламы или отслеживания.</p>
-            <p>Единственное дополнительное исключение — когда раскрытие требуется по закону, но только в пределах, предусмотренных законодательством, и с соблюдением ваших прав на конфиденциальность.</p>
-        </div>
-        <div data-lang="en">
+        <section>
             <h2>Third-Party Data Sharing</h2>
             <p>We do not sell your data. The app contains no advertising and no analytics or tracking of our own that follows you across sites or sessions.</p>
-            <p>That said, operating the VPN tunnel technically requires contacting DNS servers configured for the tunnel:</p>
+            <p>Operating the VPN tunnel technically requires contacting DNS servers configured for the tunnel:</p>
             <ul>
-                <li><strong>Google DNS and Cloudflare DNS</strong> — while the VPN is connected, your DNS queries (which domains you visit) are handled by these DNS servers, which the tunnel is configured to use</li>
+                <li><strong>Google DNS and Cloudflare DNS</strong> — while the VPN is connected, DNS queries are handled inside the encrypted tunnel by these resolvers. They do not associate queries with your identity, and we do not use them for advertising or tracking. These services operate under their own privacy policies.</li>
             </ul>
-            <p>These services operate under their own privacy policies. We send them only what is technically necessary to operate the VPN connection, and we do not use them for advertising or tracking.</p>
             <p>The only additional exception is disclosure required by law, and only to the extent required by such law, with full respect for your privacy rights.</p>
-        </div>
-    </div>
+        </section>
 
-    <div class="card">
-        <div data-lang="ru">
-            <h2>Хранение данных</h2>
-            <p>Все данные, которые могут быть сохранены:</p>
-            <ul>
-                <li>VPN-конфигурация (сервер, порт, PSK) хранится локально на устройстве и в системном профиле VPN</li>
-                <li>Настройки приложения (режим туннеля, kill switch) хранятся локально</li>
-                <li>Статус подписки кэшируется на устройстве для быстрой проверки</li>
-                <li>Никакие данные не хранятся на сервере после завершения сессии</li>
-            </ul>
-        </div>
-        <div data-lang="en">
+        <section>
+            <h2>Server-Side Data and Technical Logs</h2>
+            <p>Our backend stores a minimal subscription record — the original transaction ID, subscription expiration date, active status, and your PSK key. We do <strong>not</strong> store traffic logs, browsing history, or session data on our servers.</p>
+            <p>Standard web server logs may temporarily record the IP address and user agent of requests made to our backend (for example, when the app activates or verifies a subscription). These logs are used solely for technical diagnostics and security, are not associated with your browsing activity, and are not used for advertising or tracking.</p>
+        </section>
+
+        <section>
             <h2>Data Storage</h2>
             <p>All data that may be stored:</p>
             <ul>
                 <li>VPN configuration (server, port, PSK) is stored locally on the device and in the system VPN profile</li>
                 <li>App settings (tunnel mode, kill switch) are stored locally</li>
                 <li>Subscription status is cached on the device for quick verification</li>
-                <li>No data is stored on the server after the session ends</li>
+                <li>Server-side subscription record — original transaction ID, expiration date, active status, and PSK key</li>
             </ul>
-        </div>
-    </div>
+            <p>Server-side data is deleted when your subscription is cancelled or expires, or upon request.</p>
+        </section>
 
-    <div class="card">
-        <div data-lang="ru">
-            <h2>Безопасность</h2>
-            <p>XCH2VPN использует современные протоколы шифрования для защиты вашего соединения:</p>
-            <ul>
-                <li><strong>Шифрование:</strong> ChaCha20-Poly1305 с ECDH-рукопожатием</li>
-                <li><strong>Транспорт:</strong> WebSocket с TLS 1.2+</li>
-                <li><strong>Аутентификация:</strong> Персональный PSK-ключ на каждого пользователя</li>
-                <li><strong>Kill Switch:</strong> Блокировка интернета при обрыве VPN</li>
-            </ul>
-            <p>Эти меры обеспечивают полную конфиденциальность ваших данных при передаче.</p>
-        </div>
-        <div data-lang="en">
+        <section>
             <h2>Security</h2>
             <p>XCH2VPN uses modern encryption protocols to protect your connection:</p>
             <ul>
@@ -263,73 +124,34 @@
                 <li><strong>Kill Switch:</strong> Internet blocking on VPN disconnection</li>
             </ul>
             <p>These measures ensure complete confidentiality of your data during transmission.</p>
-        </div>
-    </div>
+        </section>
 
-    <div class="card">
-        <div data-lang="ru">
-            <h2>Удаление данных</h2>
-            <p>Вы можете удалить весь VPN-профиль через настройки приложения (кнопка «Удалить VPN-профиль»). При удалении приложения:</p>
-            <ul>
-                <li>Локальные данные удаляются с устройства</li>
-                <li>VPN-профиль удаляется из системных настроек iOS</li>
-                <li>Данные на сервере не хранятся, поэтому удалять их не требуется</li>
-            </ul>
-            <p>Ваш PSK-ключ перестаёт быть активным при отмене подписки или её истечении.</p>
-        </div>
-        <div data-lang="en">
+        <section>
             <h2>Data Deletion</h2>
             <p>You can delete the entire VPN profile through the app settings (the "Remove VPN Profile" button). When you delete the app:</p>
             <ul>
                 <li>Local data is deleted from the device</li>
                 <li>The VPN profile is deleted from iOS system settings</li>
-                <li>No data is stored on the server, so there is nothing to delete</li>
+                <li>Your subscription record on our backend is deleted when your subscription is cancelled or expires</li>
+                <li>Your PSK key is revoked and becomes inactive</li>
             </ul>
-            <p>Your PSK key becomes inactive when the subscription is cancelled or expires.</p>
-        </div>
-    </div>
+            <p>You may request deletion of your server-side subscription data at any time by contacting us at the email below.</p>
+        </section>
 
-    <div class="card">
-        <div data-lang="ru">
-            <h2>Изменения в политике</h2>
-            <p>Мы оставляем за собой право обновлять данную Политику конфиденциальности. Все изменения будут опубликованы на этой странице. Рекомендуем периодически проверять этот документ на наличие обновлений.</p>
-        </div>
-        <div data-lang="en">
+        <section>
             <h2>Policy Changes</h2>
-            <p>We reserve the right to update this Privacy Policy. All changes will be posted on this page. We recommend checking this document periodically for updates.</p>
-        </div>
-    </div>
+            <p>We reserve the right to update this Privacy Policy. All changes will be posted on this page. We will notify users of material changes through the app or via the App Store listing. We recommend checking this document periodically for updates.</p>
+        </section>
 
-    <div class="card">
-        <div data-lang="ru">
-            <h2>Контакт</h2>
-            <p>По вопросам, связанным с настоящей политикой, обращайтесь к разработчику:
-<a href="mailto:tunnelletter@gmail.com">tunnelletter@gmail.com</a></p>
-        </div>
-        <div data-lang="en">
+        <section>
             <h2>Contact</h2>
-            <p>For questions related to this policy, please contact the developer:
-<a href="mailto:tunnelletter@gmail.com">tunnelletter@gmail.com</a></p>
-        </div>
+            <p>For questions related to this policy, please contact the developer:</p>
+            <p>Email: <a href="mailto:tunnelletter@gmail.com">tunnelletter@gmail.com</a></p>
+        </section>
+
+        <footer>
+            <p>© 2026 XCH2VPN. All rights reserved.</p>
+        </footer>
     </div>
-
-    <footer>
-        <p>
-            <span data-lang="ru">Дата вступления в силу: 1 сентября 2026 г. · Обновлено: сентябрь 2026 г.</span>
-            <span data-lang="en">Effective date: September 1, 2026 · Updated: September 2026</span>
-        </p>
-    </footer>
-
-</div>
-
-<script>
-    function setLang(lang) {
-        document.body.className = 'lang-' + lang;
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
-        });
-        document.documentElement.lang = lang;
-    }
-</script>
 </body>
 </html>
