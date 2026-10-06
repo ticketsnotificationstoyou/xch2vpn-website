@@ -30,6 +30,21 @@
         a { color:#667eea; text-decoration:none; }
         a:hover { text-decoration:underline; }
         footer { text-align:center; margin-top:50px; padding-top:30px; border-top:2px solid #f0f0f0; color:#666; }
+        .lang-switch {
+            display:flex; justify-content:flex-end; gap:10px;
+            margin-bottom:20px; font-size:0.9em;
+        }
+        .lang-switch button {
+            background:none; border:1px solid #667eea; color:#667eea;
+            padding:5px 12px; border-radius:6px; cursor:pointer;
+            font-size:0.9em; font-family:inherit;
+        }
+        .lang-switch button.active {
+            background:#667eea; color:white;
+        }
+        .lang-switch button:hover {
+            background:#667eea; color:white;
+        }
         @media(max-width:600px) {
             body { padding:10px; }
             .container { padding:30px 20px; border-radius:15px; }
@@ -39,119 +54,272 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Privacy Policy</h1>
-            <p class="update-date">Last Updated: April 2026</p>
-        </header>
+        <div class="lang-switch">
+            <button onclick="setLang('en')" id="btn-en" class="active">English</button>
+            <button onclick="setLang('ru')" id="btn-ru">Русский</button>
+        </div>
 
-        <section>
-            <h2>Overview</h2>
-            <p><strong>XCH2VPN</strong> is a VPN service built on its own tunnel implementation. We take data privacy seriously. This document describes what information we collect, how we use it, and your rights.</p>
-        </section>
+        <!-- ================= ENGLISH ================= -->
+        <div id="content-en">
+            <header>
+                <h1>Privacy Policy</h1>
+                <p class="update-date">Last Updated: April 2026</p>
+            </header>
 
-        <section>
-            <h2>VPN Logs and Anonymity</h2>
-            <p><strong>Strict no-log policy.</strong> We do not log user activity. This means we never store or see:</p>
-            <ul>
-                <li>Visited websites</li>
-                <li>Session time and duration</li>
-                <li>Amount of traffic transferred</li>
-                <li>DNS queries made by the user</li>
-            </ul>
-            <p>The only technical information necessary for the service is active subscription status and connection maintenance data. This data is automatically deleted when the session ends.</p>
-        </section>
+            <section>
+                <h2>Overview</h2>
+                <p><strong>XCH2VPN</strong> is a VPN service built on its own tunnel implementation. We take data privacy seriously. This document describes what information we collect, how we use it, and your rights.</p>
+            </section>
 
-        <section>
-            <h2>Subscription Information</h2>
-            <p>To provide the service, we receive information about your subscription status through the App Store and store a minimal record on our backend. This includes:</p>
-            <ul>
-                <li>Original transaction ID (a non-personal identifier issued by Apple)</li>
-                <li>Subscription expiration date</li>
-                <li>Subscription status (active/inactive)</li>
-                <li>Your personal PSK key</li>
-            </ul>
-            <p>This information is used <strong>solely</strong> to provide access to the VPN service, verify your subscription status, and issue your personal VPN configuration. It is <strong>not shared with third parties</strong> and <strong>not used for advertising or tracking</strong>.</p>
-        </section>
+            <section>
+                <h2>VPN Logs and Anonymity</h2>
+                <p><strong>Strict no-log policy.</strong> We do not log user activity. This means we never store or see:</p>
+                <ul>
+                    <li>Visited websites</li>
+                    <li>Session time and duration</li>
+                    <li>Amount of traffic transferred</li>
+                    <li>DNS queries made by the user</li>
+                </ul>
+                <p>The only technical information necessary for the service is active subscription status and connection maintenance data. This data is automatically deleted when the session ends.</p>
+            </section>
 
-        <section>
-            <h2>VPN Profile Data</h2>
-            <p>Upon subscription activation, our backend issues each user a personal PSK key and server address. This information:</p>
-            <ul>
-                <li>Is generated automatically upon subscription activation</li>
-                <li>Contains no personal data</li>
-                <li>Is associated with your subscription only through the original transaction ID</li>
-                <li>Is used exclusively to establish a secure VPN connection</li>
-                <li>Is stored on our backend to allow re-issuance if you reinstall the app or switch devices</li>
-            </ul>
-            <p>Your PSK key is never shared with third parties and is not stored in plain text.</p>
-        </section>
+            <section>
+                <h2>Subscription Information</h2>
+                <p>To provide the service, we receive information about your subscription status through the App Store and store a minimal record on our backend. This includes:</p>
+                <ul>
+                    <li>Original transaction ID (a non-personal identifier issued by Apple)</li>
+                    <li>Subscription expiration date</li>
+                    <li>Subscription status (active/inactive)</li>
+                    <li>Your personal PSK key</li>
+                </ul>
+                <p>This information is used <strong>solely</strong> to provide access to the VPN service, verify your subscription status, and issue your personal VPN configuration. It is <strong>not shared with third parties</strong> and <strong>not used for advertising or tracking</strong>.</p>
+            </section>
 
-        <section>
-            <h2>Third-Party Data Sharing</h2>
-            <p>We do not sell your data. The app contains no advertising and no analytics or tracking of our own that follows you across sites or sessions.</p>
-            <p>Operating the VPN tunnel technically requires contacting DNS servers configured for the tunnel:</p>
-            <ul>
-                <li><strong>Google DNS and Cloudflare DNS</strong> — while the VPN is connected, DNS queries are handled inside the encrypted tunnel by these resolvers. They do not associate queries with your identity, and we do not use them for advertising or tracking. These services operate under their own privacy policies.</li>
-            </ul>
-            <p>The only additional exception is disclosure required by law, and only to the extent required by such law, with full respect for your privacy rights.</p>
-        </section>
+            <section>
+                <h2>VPN Profile Data</h2>
+                <p>Upon subscription activation, our backend issues each user a personal PSK key and server address. This information:</p>
+                <ul>
+                    <li>Is generated automatically upon subscription activation</li>
+                    <li>Contains no personal data</li>
+                    <li>Is associated with your subscription only through the original transaction ID</li>
+                    <li>Is used exclusively to establish a secure VPN connection</li>
+                    <li>Is stored on our backend to allow re-issuance if you reinstall the app or switch devices</li>
+                </ul>
+                <p>Your PSK key is never shared with third parties and is not stored in plain text.</p>
+            </section>
 
-        <section>
-            <h2>Server-Side Data and Technical Logs</h2>
-            <p>Our backend stores a minimal subscription record — the original transaction ID, subscription expiration date, active status, and your PSK key. We do <strong>not</strong> store traffic logs, browsing history, or session data on our servers.</p>
-            <p>Standard web server logs may temporarily record the IP address and user agent of requests made to our backend (for example, when the app activates or verifies a subscription). These logs are used solely for technical diagnostics and security, are not associated with your browsing activity, and are not used for advertising or tracking.</p>
-        </section>
+            <section>
+                <h2>Third-Party Data Sharing</h2>
+                <p>We do not sell your data. The app contains no advertising and no analytics or tracking of our own that follows you across sites or sessions.</p>
+                <p>Operating the VPN tunnel technically requires contacting DNS servers configured for the tunnel:</p>
+                <ul>
+                    <li><strong>Google DNS and Cloudflare DNS</strong> — while the VPN is connected, DNS queries are handled inside the encrypted tunnel by these resolvers. They do not associate queries with your identity, and we do not use them for advertising or tracking. These services operate under their own privacy policies.</li>
+                </ul>
+                <p>The only additional exception is disclosure required by law, and only to the extent required by such law, with full respect for your privacy rights.</p>
+            </section>
 
-        <section>
-            <h2>Data Storage</h2>
-            <p>All data that may be stored:</p>
-            <ul>
-                <li>VPN configuration (server, port, PSK) is stored locally on the device and in the system VPN profile</li>
-                <li>App settings (tunnel mode, kill switch) are stored locally</li>
-                <li>Subscription status is cached on the device for quick verification</li>
-                <li>Server-side subscription record — original transaction ID, expiration date, active status, and PSK key</li>
-            </ul>
-            <p>Server-side data is deleted when your subscription is cancelled or expires, or upon request.</p>
-        </section>
+            <section>
+                <h2>Server-Side Data and Technical Logs</h2>
+                <p>Our backend stores a minimal subscription record — the original transaction ID, subscription expiration date, active status, and your PSK key. We do <strong>not</strong> store traffic logs, browsing history, or session data on our servers.</p>
+                <p>Standard web server logs may temporarily record the IP address and user agent of requests made to our backend (for example, when the app activates or verifies a subscription). These logs are used solely for technical diagnostics and security, are not associated with your browsing activity, and are not used for advertising or tracking.</p>
+            </section>
 
-        <section>
-            <h2>Security</h2>
-            <p>XCH2VPN uses modern encryption protocols to protect your connection:</p>
-            <ul>
-                <li><strong>Encryption:</strong> ChaCha20-Poly1305 with ECDH handshake</li>
-                <li><strong>Transport:</strong> WebSocket with TLS 1.2+</li>
-                <li><strong>Authentication:</strong> Personal PSK key per user</li>
-                <li><strong>Kill Switch:</strong> Internet blocking on VPN disconnection</li>
-            </ul>
-            <p>These measures ensure complete confidentiality of your data during transmission.</p>
-        </section>
+            <section>
+                <h2>Data Storage</h2>
+                <p>All data that may be stored:</p>
+                <ul>
+                    <li>VPN configuration (server, port, PSK) is stored locally on the device and in the system VPN profile</li>
+                    <li>App settings (tunnel mode, kill switch) are stored locally</li>
+                    <li>Subscription status is cached on the device for quick verification</li>
+                    <li>Server-side subscription record — original transaction ID, expiration date, active status, and PSK key</li>
+                </ul>
+                <p>Server-side data is marked inactive when your subscription is cancelled or expires. Inactive records are purged periodically, and you may request permanent deletion at any time by contacting us at the email below.</p>
+            </section>
 
-        <section>
-            <h2>Data Deletion</h2>
-            <p>You can delete the entire VPN profile through the app settings (the "Remove VPN Profile" button). When you delete the app:</p>
-            <ul>
-                <li>Local data is deleted from the device</li>
-                <li>The VPN profile is deleted from iOS system settings</li>
-                <li>Your subscription record on our backend is deleted when your subscription is cancelled or expires</li>
-                <li>Your PSK key is revoked and becomes inactive</li>
-            </ul>
-            <p>You may request deletion of your server-side subscription data at any time by contacting us at the email below.</p>
-        </section>
+            <section>
+                <h2>Security</h2>
+                <p>XCH2VPN uses modern encryption protocols to protect your connection:</p>
+                <ul>
+                    <li><strong>Encryption:</strong> ChaCha20-Poly1305 with ECDH handshake</li>
+                    <li><strong>Transport:</strong> WebSocket with TLS 1.2+</li>
+                    <li><strong>Authentication:</strong> Personal PSK key per user</li>
+                    <li><strong>Kill Switch:</strong> Internet blocking on VPN disconnection</li>
+                </ul>
+                <p>These measures ensure complete confidentiality of your data during transmission.</p>
+            </section>
 
-        <section>
-            <h2>Policy Changes</h2>
-            <p>We reserve the right to update this Privacy Policy. All changes will be posted on this page. We will notify users of material changes through the app or via the App Store listing. We recommend checking this document periodically for updates.</p>
-        </section>
+            <section>
+                <h2>Data Deletion</h2>
+                <p>You can delete the entire VPN profile through the app settings (the "Remove VPN Profile" button). When you delete the app:</p>
+                <ul>
+                    <li>Local data is deleted from the device</li>
+                    <li>The VPN profile is deleted from iOS system settings</li>
+                    <li>Your subscription record on our backend is marked inactive when your subscription is cancelled or expires, and is permanently deleted upon request</li>
+                    <li>Your PSK key is revoked and becomes inactive</li>
+                </ul>
+                <p>You may request permanent deletion of your server-side subscription data at any time by contacting us at the email below.</p>
+            </section>
 
-        <section>
-            <h2>Contact</h2>
-            <p>For questions related to this policy, please contact the developer:</p>
-            <p>Email: <a href="mailto:tunnelletter@gmail.com">tunnelletter@gmail.com</a></p>
-        </section>
+            <section>
+                <h2>Policy Changes</h2>
+                <p>We reserve the right to update this Privacy Policy. All changes will be posted on this page. We will notify users of material changes through the app or via the App Store listing. We recommend checking this document periodically for updates.</p>
+            </section>
+
+            <section>
+                <h2>Contact</h2>
+                <p>For questions related to this policy, please contact the developer:</p>
+                <p>Email: <a href="mailto:tunnelletter@gmail.com">tunnelletter@gmail.com</a></p>
+            </section>
+        </div>
+
+        <!-- ================= РУССКИЙ ================= -->
+        <div id="content-ru" style="display:none;">
+            <header>
+                <h1>Политика конфиденциальности</h1>
+                <p class="update-date">Последнее обновление: апрель 2026</p>
+            </header>
+
+            <section>
+                <h2>Общие положения</h2>
+                <p><strong>XCH2VPN</strong> — это VPN-сервис, построенный на собственной реализации туннеля. Мы серьёзно относимся к защите данных. В этом документе описано, какую информацию мы собираем, как используем и какие у вас есть права.</p>
+            </section>
+
+            <section>
+                <h2>Логи VPN и анонимность</h2>
+                <p><strong>Строгая политика отсутствия логов.</strong> Мы не логируем активность пользователей. Это значит, что мы никогда не храним и не видим:</p>
+                <ul>
+                    <li>Посещённые веб-сайты</li>
+                    <li>Время и длительность сессий</li>
+                    <li>Объём переданного трафика</li>
+                    <li>DNS-запросы пользователя</li>
+                </ul>
+                <p>Единственная техническая информация, необходимая для работы сервиса, — это статус активной подписки и данные для поддержания соединения. Эти данные автоматически удаляются по завершении сессии.</p>
+            </section>
+
+            <section>
+                <h2>Информация о подписке</h2>
+                <p>Для предоставления сервиса мы получаем информацию о статусе вашей подписки через App Store и храним минимальную запись на нашем бэкенде. Она включает:</p>
+                <ul>
+                    <li>Исходный идентификатор транзакции (original transaction ID) — неперсональный идентификатор, выданный Apple</li>
+                    <li>Дата окончания подписки</li>
+                    <li>Статус подписки (активна/неактивна)</li>
+                    <li>Ваш персональный PSK-ключ</li>
+                </ul>
+                <p>Эта информация используется <strong>исключительно</strong> для предоставления доступа к VPN-сервису, проверки статуса подписки и выдачи вашей персональной VPN-конфигурации. Она <strong>не передаётся третьим лицам</strong> и <strong>не используется для рекламы или отслеживания</strong>.</p>
+            </section>
+
+            <section>
+                <h2>Данные VPN-профиля</h2>
+                <p>При активации подписки наш бэкенд выдаёт каждому пользователю персональный PSK-ключ и адрес сервера. Эта информация:</p>
+                <ul>
+                    <li>Генерируется автоматически при активации подписки</li>
+                    <li>Не содержит персональных данных</li>
+                    <li>Связана с вашей подпиской только через исходный идентификатор транзакции</li>
+                    <li>Используется исключительно для установления защищённого VPN-соединения</li>
+                    <li>Хранится на нашем бэкенде, чтобы её можно было выдать заново при переустановке приложения или смене устройства</li>
+                </ul>
+                <p>Ваш PSK-ключ никогда не передаётся третьим лицам и не хранится в открытом виде.</p>
+            </section>
+
+            <section>
+                <h2>Передача данных третьим лицам</h2>
+                <p>Мы не продаём ваши данные. Приложение не содержит рекламы и не использует собственную аналитику или отслеживание, которое следило бы за вами между сайтами или сессиями.</p>
+                <p>Для работы VPN-туннеля технически необходимо обращаться к DNS-серверам, настроенным для туннеля:</p>
+                <ul>
+                    <li><strong>Google DNS и Cloudflare DNS</strong> — пока VPN подключён, DNS-запросы обрабатываются внутри зашифрованного туннеля этими резолверами. Они не связывают запросы с вашей личностью, и мы не используем их для рекламы или отслеживания. Эти сервисы работают в соответствии со своими собственными политиками конфиденциальности.</li>
+                </ul>
+                <p>Единственное дополнительное исключение — раскрытие информации по требованию закона и только в объёме, требуемом таким законом, с полным уважением к вашим правам на конфиденциальность.</p>
+            </section>
+
+            <section>
+                <h2>Серверные данные и технические логи</h2>
+                <p>Наш бэкенд хранит минимальную запись о подписке — исходный идентификатор транзакции, дату окончания подписки, статус активности и ваш PSK-ключ. Мы <strong>не</strong> храним на серверах логи трафика, историю посещений или данные сессий.</p>
+                <p>Стандартные логи веб-сервера могут временно фиксировать IP-адрес и user agent запросов к нашему бэкенду (например, когда приложение активирует или проверяет подписку). Эти логи используются исключительно для технической диагностики и безопасности, не связываются с вашей активностью в интернете и не используются для рекламы или отслеживания.</p>
+            </section>
+
+            <section>
+                <h2>Хранение данных</h2>
+                <p>Все данные, которые могут храниться:</p>
+                <ul>
+                    <li>VPN-конфигурация (сервер, порт, PSK) хранится локально на устройстве и в системном VPN-профиле</li>
+                    <li>Настройки приложения (режим туннеля, kill switch) хранятся локально</li>
+                    <li>Статус подписки кэшируется на устройстве для быстрой проверки</li>
+                    <li>Серверная запись о подписке — исходный идентификатор транзакции, дата окончания, статус активности и PSK-ключ</li>
+                </ul>
+                <p>Серверные данные помечаются неактивными при отмене или истечении подписки. Неактивные записи периодически удаляются, и вы можете в любой момент запросить их полное удаление, связавшись с нами по email ниже.</p>
+            </section>
+
+            <section>
+                <h2>Безопасность</h2>
+                <p>XCH2VPN использует современные протоколы шифрования для защиты вашего соединения:</p>
+                <ul>
+                    <li><strong>Шифрование:</strong> ChaCha20-Poly1305 с ECDH-рукопожатием</li>
+                    <li><strong>Транспорт:</strong> WebSocket с TLS 1.2+</li>
+                    <li><strong>Аутентификация:</strong> Персональный PSK-ключ для каждого пользователя</li>
+                    <li><strong>Kill Switch:</strong> Блокировка интернета при разрыве VPN-соединения</li>
+                </ul>
+                <p>Эти меры обеспечивают полную конфиденциальность ваших данных при передаче.</p>
+            </section>
+
+            <section>
+                <h2>Удаление данных</h2>
+                <p>Вы можете удалить весь VPN-профиль через настройки приложения (кнопка «Remove VPN Profile»). При удалении приложения:</p>
+                <ul>
+                    <li>Локальные данные удаляются с устройства</li>
+                    <li>VPN-профиль удаляется из системных настроек iOS</li>
+                    <li>Ваша серверная запись о подписке помечается неактивной при отмене или истечении подписки и полностью удаляется по запросу</li>
+                    <li>Ваш PSK-ключ отзывается и становится неактивным</li>
+                </ul>
+                <p>Вы можете в любой момент запросить полное удаление серверных данных о подписке, связавшись с нами по email ниже.</p>
+            </section>
+
+            <section>
+                <h2>Изменения политики</h2>
+                <p>Мы оставляем за собой право обновлять эту Политику конфиденциальности. Все изменения будут опубликованы на этой странице. О существенных изменениях мы уведомим пользователей через приложение или через страницу в App Store. Рекомендуем периодически проверять этот документ.</p>
+            </section>
+
+            <section>
+                <h2>Контакты</h2>
+                <p>По вопросам, связанным с этой политикой, обращайтесь к разработчику:</p>
+                <p>Email: <a href="mailto:tunnelletter@gmail.com">tunnelletter@gmail.com</a></p>
+            </section>
+        </div>
 
         <footer>
-            <p>© 2026 XCH2VPN. All rights reserved.</p>
+            <p id="footer-en">© 2026 XCH2VPN. All rights reserved.</p>
+            <p id="footer-ru" style="display:none;">© 2026 XCH2VPN. Все права защищены.</p>
         </footer>
     </div>
+
+    <script>
+        function setLang(lang) {
+            // Скрыть оба блока
+            document.getElementById('content-en').style.display = 'none';
+            document.getElementById('content-ru').style.display = 'none';
+            document.getElementById('footer-en').style.display = 'none';
+            document.getElementById('footer-ru').style.display = 'none';
+
+            // Показать нужный
+            document.getElementById('content-' + lang).style.display = 'block';
+            document.getElementById('footer-' + lang).style.display = 'block';
+
+            // Обновить кнопки
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-ru').classList.toggle('active', lang === 'ru');
+
+            // Обновить lang у <html>
+            document.documentElement.lang = lang;
+
+            // Запомнить выбор
+            localStorage.setItem('xch2-lang', lang);
+        }
+
+        // При загрузке — восстановить выбранный язык или определить по браузеру
+        (function() {
+            const saved = localStorage.getItem('xch2-lang');
+            const browserLang = navigator.language?.startsWith('ru') ? 'ru' : 'en';
+            setLang(saved || browserLang);
+        })();
+    </script>
 </body>
 </html>
